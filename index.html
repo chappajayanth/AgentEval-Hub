@@ -109,58 +109,25 @@ hr{border:none;border-top:1px solid var(--border);margin:20px 0}
 .filter-btn{padding:6px 14px;border-radius:20px;font-size:12px;font-weight:500;cursor:pointer;border:1px solid var(--border);background:transparent;color:var(--muted);transition:all .15s;font-family:'Inter',sans-serif}
 .filter-btn:hover,.filter-btn.active{background:var(--red);color:#fff;border-color:var(--red)}
 
-/* ═══════════════════════════════
-   PAGE 2 — BENCHMARK CARD
-═══════════════════════════════ */
-.card-preview{background:var(--s2);border:1px solid var(--border);border-radius:16px;padding:28px;position:sticky;top:80px}
-.agent-card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px;gap:16px}
-.agent-name-big{font-family:var(--head);font-size:20px;font-weight:700}
-.agent-version{font-size:11px;color:var(--muted);margin-top:2px}
-.score-ring{width:62px;height:62px;position:relative;flex-shrink:0}
-.score-ring svg{width:62px;height:62px;transform:rotate(-90deg)}
-.score-ring .ring-bg{stroke:var(--border);stroke-width:5;fill:none}
-.score-ring .ring-fill{stroke:var(--cyan);stroke-width:5;fill:none;stroke-linecap:round;transition:stroke-dasharray .8s ease}
-.score-ring .ring-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--head);font-size:14px;font-weight:700;color:var(--cyan)}
-.metric-row-card{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--border)}
-.metric-row-card:last-child{border-bottom:none}
-.metric-row-card .ml{font-size:12px;color:var(--muted)}
-.metric-row-card .mv{font-family:var(--mono);font-size:12px;font-weight:500}
-.failure-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
-.card-section-label{font-size:10px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);margin-bottom:8px;margin-top:16px;font-weight:600}
-#card-tasks-display .task-pill{display:inline-block;background:var(--s3);border:1px solid var(--border);border-radius:6px;font-size:11px;padding:3px 9px;margin:3px 3px 3px 0;color:var(--text)}
-.copy-btn{display:flex;align-items:center;gap:6px;padding:7px 16px;border-radius:8px;background:var(--s3);border:1px solid var(--border);color:var(--muted);font-size:12px;cursor:pointer;width:100%;margin-top:16px;justify-content:center;transition:all .15s;font-family:'Inter',sans-serif}
-.copy-btn:hover{border-color:var(--cyan);color:var(--cyan)}
-
-/* ═══════════════════════════════
-   PAGE 3 — TELEPHONE GAME
-═══════════════════════════════ */
-.phone-chain{display:flex;flex-direction:column;gap:0}
-.phone-node{display:grid;grid-template-columns:120px 1fr;gap:0;position:relative}
-.phone-node::before{content:'';position:absolute;left:59px;top:60px;width:2px;height:calc(100% - 10px);background:var(--border)}
-.phone-node:last-child::before{display:none}
-.phone-left{display:flex;flex-direction:column;align-items:center;padding-top:20px;padding-bottom:20px;gap:6px;position:relative;z-index:1}
-.phone-avatar{width:46px;height:46px;border-radius:50%;border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:20px;background:var(--s2);flex-shrink:0}
-.phone-avatar.degraded{border-color:var(--red)}
-.phone-agent-label{font-size:10px;color:var(--muted);font-weight:500;text-align:center;max-width:90px}
-.phone-right{padding:16px 0 16px 20px}
-.phone-bubble{background:var(--s1);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:8px}
-.phone-bubble.original{border-color:var(--green)}
-.phone-bubble.degraded{border-color:var(--amber)}
-.phone-bubble.corrupted{border-color:var(--red)}
-.phone-bubble-label{font-size:10px;text-transform:uppercase;letter-spacing:.7px;font-weight:600;margin-bottom:6px}
-.phone-bubble.original .phone-bubble-label{color:var(--green)}
-.phone-bubble.degraded .phone-bubble-label{color:var(--amber)}
-.phone-bubble.corrupted .phone-bubble-label{color:var(--red)}
-.phone-text{font-size:13px;line-height:1.6}
-.phone-diff{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px}
-.w-ok{color:var(--text);font-size:12px}
-.w-removed{color:var(--red);text-decoration:line-through;font-size:12px}
-.w-added{color:var(--amber);font-size:12px;font-weight:600}
-.w-halluc{color:var(--red);font-size:12px;font-weight:600;background:#FF5F5F15;padding:0 3px;border-radius:3px}
-.degradation-meter{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:11px;color:var(--muted)}
-.chain-controls{display:flex;gap:10px;margin-bottom:28px;align-items:center;flex-wrap:wrap}
-.scenario-pill{padding:7px 16px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:12px;cursor:pointer;font-family:'Inter',sans-serif;transition:all .15s}
-.scenario-pill:hover,.scenario-pill.active{background:var(--purple);color:#fff;border-color:var(--purple)}
+.eval-panel{margin-bottom:16px;overflow-wrap:anywhere}
+.eval-actions,.eval-stats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}
+.eval-panel details,.eval-panel [role=status],#eval-unmatched{margin-top:12px;color:var(--muted)}
+.eval-panel summary{cursor:pointer}
+.eval-panel pre{white-space:pre-wrap;font:12px var(--mono);padding:12px;background:var(--bg);border-radius:8px}
+.eval-panel textarea{width:100%;resize:vertical;font:12px var(--mono)}
+.eval-panel .btn:disabled{opacity:.45;cursor:default}
+.eval-stats>div{flex:1 1 125px;padding:12px;border:1px solid var(--border);border-radius:8px}
+.eval-stats strong{display:block;font-size:20px}
+.eval-table{overflow:auto}
+.eval-table table{border-collapse:collapse;width:100%;font-size:13px}
+.eval-table th,.eval-table td{text-align:left;padding:10px;border-bottom:1px solid var(--border);vertical-align:top}
+.eval-table td small{display:block;color:var(--muted);margin-top:4px;white-space:pre-wrap}
+.eval-table .btn{margin-top:6px;padding:5px 9px}
+.eval-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.trace-step{margin-bottom:10px}
+.trace-step summary{display:flex;justify-content:space-between;gap:12px;cursor:pointer}
+.trace-step summary strong{color:var(--cyan)}
+.trace-step .eval-table{margin-top:10px}
 
 /* ═══════════════════════════════
    PAGE 4 — COST vs ACCURACY
@@ -256,8 +223,8 @@ hr{border:none;border-top:1px solid var(--border);margin:20px 0}
 <nav class="topnav">
   <div class="nav-logo">Agent<span>Eval</span> <span style="color:var(--muted);font-weight:400;font-size:12px">Hub</span></div>
   <div class="nav-tab active"  onclick="nav('redteam',this)"><span class="ni">🔴</span>Red Team</div>
-  <div class="nav-tab" onclick="nav('benchmark',this)"><span class="ni">🪪</span>Benchmark Card</div>
-  <div class="nav-tab" onclick="nav('telephone',this)"><span class="ni">📞</span>Telephone Game</div>
+  <div class="nav-tab" onclick="nav('benchmark',this)"><span class="ni">🪪</span>Eval Run Comparator</div>
+  <div class="nav-tab" id="trace-tab" onclick="nav('telephone',this)"><span class="ni">🔎</span>Trace Inspector</div>
   <div class="nav-tab" onclick="nav('frontier',this)"><span class="ni">📈</span>Cost vs Accuracy</div>
   <div class="nav-tab" onclick="nav('ground',this)"><span class="ni">🔍</span>Groundedness</div>
   <div class="nav-tab" onclick="nav('incidents',this)"><span class="ni">📋</span>Incident Archive</div>
@@ -280,110 +247,56 @@ hr{border:none;border-top:1px solid var(--border);margin:20px 0}
   <div id="attack-list"></div>
 </div>
 
-<!-- ══════════════════════════════════════
-     PAGE 2 — BENCHMARK CARD GENERATOR
-══════════════════════════════════════ -->
 <div id="page-benchmark" class="page">
-  <div class="ph">🪪 Agent Benchmark Card Generator</div>
-  <div class="ps">Fill in details about your agent and get a standardized "nutrition label" — a shareable capability card you can include in docs, talks, or PRs.</div>
-  <div class="grid2">
-    <!-- Form -->
-    <div>
-      <div class="card" style="margin-bottom:16px">
-        <div class="card-title">Agent identity</div>
-        <div class="field"><label>Agent name</label><input id="bc-name" placeholder="e.g. PO Validation Agent" oninput="updateCard()"></div>
-        <div class="field"><label>Version / model</label><input id="bc-version" placeholder="e.g. v2.1 · claude-sonnet-4-6" oninput="updateCard()"></div>
-        <div class="field"><label>Primary domain</label>
-          <select id="bc-domain" onchange="updateCard()">
-            <option value="Finance & procurement">Finance & procurement</option>
-            <option value="Customer support">Customer support</option>
-            <option value="Code & DevOps">Code & DevOps</option>
-            <option value="HR & compliance">HR & compliance</option>
-            <option value="Supply chain">Supply chain</option>
-            <option value="Research & analysis">Research & analysis</option>
-          </select>
-        </div>
-        <div class="field"><label>Tasks handled (comma separated)</label><input id="bc-tasks" placeholder="Validate PO, raise Jira ticket, book order" oninput="updateCard()"></div>
-      </div>
-      <div class="card" style="margin-bottom:16px">
-        <div class="card-title">Performance metrics</div>
-        <div class="grid2" style="gap:10px">
-          <div class="field"><label>Task accuracy %</label><input id="bc-acc" type="number" min="0" max="100" value="78" oninput="updateCard()"></div>
-          <div class="field"><label>Tool-call accuracy %</label><input id="bc-tool" type="number" min="0" max="100" value="91" oninput="updateCard()"></div>
-          <div class="field"><label>Avg latency (s)</label><input id="bc-lat" type="number" step="0.1" value="1.8" oninput="updateCard()"></div>
-          <div class="field"><label>Hallucination rate %</label><input id="bc-hall" type="number" min="0" max="100" value="8" oninput="updateCard()"></div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-title">Failure modes & oversight</div>
-        <div class="field"><label>Top failure modes (comma separated)</label><input id="bc-fails" placeholder="Wrong tool selection, goal drift" oninput="updateCard()"></div>
-        <div class="field"><label>Human-in-loop level</label>
-          <select id="bc-hitl" onchange="updateCard()">
-            <option>Full autonomy</option>
-            <option>Approval on exceptions</option>
-            <option selected>Approval on high-risk actions</option>
-            <option>Human reviews every action</option>
-          </select>
-        </div>
-        <div class="field"><label>Eval framework used</label>
-          <select id="bc-eval" onchange="updateCard()">
-            <option>Custom rule-based</option>
-            <option>DeepEval</option>
-            <option>RAGAS</option>
-            <option>Inspect (UK AISI)</option>
-            <option>LLM-as-judge</option>
-            <option>Human annotation</option>
-          </select>
-        </div>
-      </div>
+  <div class="ph">Eval Run Comparator</div>
+  <div class="ps">Compare baseline and candidate results by case ID. Files are processed in your browser.</div>
+  <div class="card eval-panel">
+    <div class="grid2">
+      <div class="field"><label for="eval-base">Baseline run</label><input type="file" id="eval-base" accept=".json,.csv"></div>
+      <div class="field"><label for="eval-next">Candidate run</label><input type="file" id="eval-next" accept=".json,.csv"></div>
     </div>
-    <!-- Preview -->
-    <div>
-      <div class="card-preview">
-        <div class="agent-card-header">
-          <div>
-            <div class="agent-name-big" id="card-name-display">PO Validation Agent</div>
-            <div class="agent-version" id="card-version-display">v2.1 · claude-sonnet-4-6</div>
-            <div style="margin-top:8px" id="card-domain-display"><span class="badge b-cyan">Finance & procurement</span></div>
-          </div>
-          <div class="score-ring">
-            <svg viewBox="0 0 62 62"><circle class="ring-bg" cx="31" cy="31" r="27"/><circle class="ring-fill" id="ring-fill" cx="31" cy="31" r="27" stroke-dasharray="122 170" stroke-dashoffset="0"/></svg>
-            <div class="ring-text" id="ring-text">78%</div>
-          </div>
-        </div>
-        <div class="card-section-label">Tasks</div>
-        <div id="card-tasks-display"></div>
-        <div class="card-section-label">Performance</div>
-        <div class="metric-row-card"><span class="ml">Task accuracy</span><span class="mv" id="cdacc" style="color:var(--green)">78%</span></div>
-        <div class="metric-row-card"><span class="ml">Tool-call accuracy</span><span class="mv" id="cdtool" style="color:var(--green)">91%</span></div>
-        <div class="metric-row-card"><span class="ml">Avg latency</span><span class="mv" id="cdlat">1.8s</span></div>
-        <div class="metric-row-card"><span class="ml">Hallucination rate</span><span class="mv" id="cdhall" style="color:var(--amber)">8%</span></div>
-        <div class="card-section-label">Top failure modes</div>
-        <div class="failure-tags" id="card-fails-display"></div>
-        <div class="card-section-label">Oversight & eval</div>
-        <div class="metric-row-card"><span class="ml">Human-in-loop</span><span class="mv" id="cdhitl" style="font-size:11px">Approval on high-risk actions</span></div>
-        <div class="metric-row-card"><span class="ml">Eval framework</span><span class="mv" id="cdeval" style="font-size:11px">Custom rule-based</span></div>
-        <button class="copy-btn" onclick="copyCard()">📋 Copy card as text</button>
-      </div>
+    <div class="eval-actions">
+      <button class="btn btn-primary" id="eval-compare">Compare files</button>
+      <button class="btn btn-ghost" id="eval-sample">Load sample runs</button>
+      <button class="btn btn-ghost" id="eval-export" disabled>Download benchmark card</button>
     </div>
+    <details><summary>File format</summary>
+      <p>Use CSV headers <code>id,status,detail</code> or a JSON array of objects with those fields. Each ID must be unique within its run. Use <code>pass</code> or <code>fail</code> for status. Detail is optional. JSON cases may include an optional <code>trace</code> object using the Trace Inspector format.</p>
+      <pre>[{"id":"incident-report","status":"fail","detail":"Data loss finding changed"}]</pre>
+    </details>
+    <p id="eval-message" role="status"></p>
+  </div>
+  <div class="card eval-panel" id="eval-results" hidden>
+    <div id="eval-summary" class="eval-stats"></div>
+    <div id="eval-unmatched"></div>
+    <div class="field"><label for="eval-filter">Filter cases</label>
+      <select id="eval-filter"><option value="all">All cases</option><option>Regression</option><option>Improvement</option><option>Still failing</option><option>Still passing</option><option>Baseline only</option><option>Candidate only</option></select>
+    </div>
+    <div class="eval-table"><table><caption class="eval-sr">Comparison by case ID</caption>
+      <thead><tr><th scope="col">Case</th><th scope="col">Baseline</th><th scope="col">Candidate</th><th scope="col">Result</th></tr></thead>
+      <tbody id="eval-rows"></tbody>
+    </table></div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     PAGE 3 — TELEPHONE GAME
-══════════════════════════════════════ -->
 <div id="page-telephone" class="page">
-  <div class="ph">📞 The Telephone Game</div>
-  <div class="ps">Watch information degrade as it passes through a chain of agents. Each hop introduces drift, omission, or hallucination — this is why multi-agent accuracy is hard.</div>
-  <div class="chain-controls">
-    <span style="font-size:12px;color:var(--muted);margin-right:4px">Scenario:</span>
-    <button class="scenario-pill active" onclick="loadScenario(0,this)">Invoice routing</button>
-    <button class="scenario-pill" onclick="loadScenario(1,this)">Customer complaint</button>
-    <button class="scenario-pill" onclick="loadScenario(2,this)">Incident report</button>
-    <button class="btn btn-ghost" style="margin-left:auto;padding:6px 14px;font-size:12px" onclick="animateChain()">▶ Animate</button>
+  <div class="ph">Trace Inspector</div>
+  <div class="ps">Find the first agent step that dropped or changed a required field. Trace JSON stays in your browser.</div>
+  <div class="card eval-panel">
+    <div class="field"><label for="trace-input">Trace JSON</label><textarea id="trace-input" rows="6" spellcheck="false"></textarea></div>
+    <div class="eval-actions">
+      <button class="btn btn-primary" id="trace-inspect">Inspect trace</button>
+      <button class="btn btn-ghost" id="trace-sample">Load incident example</button>
+    </div>
+    <details><summary>File format</summary>
+      <p>Provide an <code>expected</code> object and ordered <code>steps</code>. Each step needs a <code>name</code> and a <code>fields</code> object. Use strings, numbers, booleans, or null as field values. An optional <code>type</code> labels the step, such as Handoff or Tool call.</p>
+      <pre>{"expected":{"data_loss":false},"steps":[{"name":"Triage","fields":{"data_loss":"unknown"}}]}</pre>
+    </details>
+    <p id="trace-message" role="status"></p>
   </div>
-  <div id="phone-chain"></div>
+  <div id="trace-results" class="eval-panel"></div>
 </div>
+
 
 <!-- ══════════════════════════════════════
      PAGE 4 — COST vs ACCURACY FRONTIER
@@ -566,147 +479,293 @@ function filterAttacks(cat, el) {
 }
 renderAttacks();
 
-// ═══════════════════════════════
-// PAGE 2 — BENCHMARK CARD
-// ═══════════════════════════════
-function updateCard() {
-  const name = document.getElementById('bc-name').value || 'My Agent';
-  const version = document.getElementById('bc-version').value || '—';
-  const domain = document.getElementById('bc-domain').value;
-  const tasks = document.getElementById('bc-tasks').value;
-  const acc = parseInt(document.getElementById('bc-acc').value) || 0;
-  const tool = parseInt(document.getElementById('bc-tool').value) || 0;
-  const lat = document.getElementById('bc-lat').value || '—';
-  const hall = parseInt(document.getElementById('bc-hall').value) || 0;
-  const fails = document.getElementById('bc-fails').value;
-  const hitl = document.getElementById('bc-hitl').value;
-  const evalfw = document.getElementById('bc-eval').value;
+// Eval Run Comparator and Trace Inspector
+const evalElement = id => document.getElementById(id);
+const incidentTrace = {
+  expected: { outage_minutes: 15, affected_users: 2400, data_loss: false, root_cause: 'Failed migration on user_sessions' },
+  steps: [
+    { name: 'Alert agent', type: 'Handoff', fields: { outage_minutes: 15, affected_users: 2400, data_loss: false, root_cause: 'Failed migration on user_sessions' } },
+    { name: 'Triage agent', type: 'Handoff', fields: { outage_minutes: 15, affected_users: 2400, data_loss: 'unknown', root_cause: 'Failed migration on user_sessions' } },
+    { name: 'Publish incident summary', type: 'Tool call', fields: { outage_minutes: 15, affected_users: 2400, data_loss: 'investigating' } }
+  ]
+};
 
-  document.getElementById('card-name-display').textContent = name;
-  document.getElementById('card-version-display').textContent = version;
-  document.getElementById('card-domain-display').innerHTML = `<span class="badge b-cyan">${domain}</span>`;
-  document.getElementById('cdacc').textContent = acc + '%';
-  document.getElementById('cdacc').style.color = acc >= 80 ? 'var(--green)' : acc >= 60 ? 'var(--amber)' : 'var(--red)';
-  document.getElementById('cdtool').textContent = tool + '%';
-  document.getElementById('cdlat').textContent = lat + 's';
-  document.getElementById('cdhall').textContent = hall + '%';
-  document.getElementById('cdhall').style.color = hall <= 5 ? 'var(--green)' : hall <= 15 ? 'var(--amber)' : 'var(--red)';
-  document.getElementById('cdhitl').textContent = hitl;
-  document.getElementById('cdeval').textContent = evalfw;
-
-  // Ring
-  const circ = 2 * Math.PI * 27;
-  const fill = (acc / 100) * circ;
-  document.getElementById('ring-fill').setAttribute('stroke-dasharray', `${fill} ${circ}`);
-  document.getElementById('ring-text').textContent = acc + '%';
-  document.getElementById('ring-fill').setAttribute('stroke', acc >= 80 ? 'var(--green)' : acc >= 60 ? 'var(--amber)' : 'var(--red)');
-
-  // Tasks
-  const tasksEl = document.getElementById('card-tasks-display');
-  tasksEl.innerHTML = tasks.split(',').filter(t => t.trim()).map(t => `<span class="task-pill">${t.trim()}</span>`).join('') || '<span style="color:var(--muted);font-size:12px">No tasks specified</span>';
-
-  // Fails
-  const failsEl = document.getElementById('card-fails-display');
-  failsEl.innerHTML = fails.split(',').filter(f => f.trim()).map(f => `<span class="badge b-red" style="margin:2px">${f.trim()}</span>`).join('') || '<span style="color:var(--muted);font-size:12px">None specified</span>';
-}
-function copyCard() {
-  const name = document.getElementById('bc-name').value || 'My Agent';
-  const acc = document.getElementById('bc-acc').value;
-  const tool = document.getElementById('bc-tool').value;
-  const lat = document.getElementById('bc-lat').value;
-  const hall = document.getElementById('bc-hall').value;
-  const text = `AGENT BENCHMARK CARD\n====================\nAgent: ${name}\nVersion: ${document.getElementById('bc-version').value}\nDomain: ${document.getElementById('bc-domain').value}\nTask accuracy: ${acc}% | Tool accuracy: ${tool}% | Latency: ${lat}s | Hallucination: ${hall}%\nHuman-in-loop: ${document.getElementById('bc-hitl').value}\nEval framework: ${document.getElementById('bc-eval').value}\nFailure modes: ${document.getElementById('bc-fails').value}`;
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.querySelector('.copy-btn');
-    btn.textContent = '✓ Copied!'; btn.style.color = 'var(--green)';
-    setTimeout(() => { btn.textContent = '📋 Copy card as text'; btn.style.color = ''; }, 2000);
-  });
-}
-updateCard();
-
-// ═══════════════════════════════
-// PAGE 3 — TELEPHONE GAME
-// ═══════════════════════════════
-const scenarios = [
-  {
-    name: 'Invoice routing',
-    nodes: [
-      { agent:'User', emoji:'👤', label:'Original request', cls:'original', text:'Route invoice INV-4421 from Apex Supplies for $12,400. Payment terms are Net-30. PO reference PO-8821. Approved by Sarah Chen on Oct 14. Send to accounts payable.', diff:null },
-      { agent:'Intake Agent', emoji:'🤖', label:'After intake agent', cls:'degraded', text:'Route invoice from Apex for $12,400. Net-30 terms. PO-8821. Approved Oct 14. Send to AP.', diff:['Route','invoice','from','Apex','for','$12,400.','Net-30','terms.','PO-8821.','Approved','Oct 14.','Send','to','AP.'] },
-      { agent:'Routing Agent', emoji:'🤖', label:'After routing agent', cls:'degraded', text:'Invoice from Apex for $12,400 needs AP routing. PO-8821. Due in 30 days from approval.', diff:null, changes:{'INV-4421 dropped':true,'Sarah Chen dropped':true,'"from approval" hallucinated':true} },
-      { agent:'AP Agent', emoji:'🤖', label:'After AP agent', cls:'corrupted', text:'Route $12,400 payment to Apex. Due in 30 days. No PO reference on file. Escalate for missing documentation.', diff:null, changes:{'PO-8821 lost':true,'Escalation hallucinated':true,'Oct 14 date lost':true} },
-      { agent:'Finance System', emoji:'🏦', label:'Final logged action', cls:'corrupted', text:'ESCALATED: Payment $12,400 to Apex. Missing PO. Hold pending review.', diff:null, changes:{'Correct invoice blocked':true} },
-    ]
-  },
-  {
-    name: 'Customer complaint',
-    nodes: [
-      { agent:'Customer', emoji:'👤', label:'Original complaint', cls:'original', text:'My order #ORD-9912 arrived damaged on Nov 3rd. The box was crushed and the screen is cracked. I need a replacement, not a refund. My warranty is still active until Dec 2027.' },
-      { agent:'Triage Agent', emoji:'🤖', label:'After triage', cls:'degraded', text:'Customer reports damaged order ORD-9912 from Nov 3. Screen cracked. Requests replacement. Warranty active.' },
-      { agent:'Support Agent', emoji:'🤖', label:'After support agent', cls:'degraded', text:'Order ORD-9912 damaged. Customer wants replacement or refund. Warranty status unclear — verify before processing.', changes:{'"or refund" added':true,'Warranty certainty lost':true} },
-      { agent:'Resolution Agent', emoji:'🤖', label:'After resolution', cls:'corrupted', text:'Issue refund for ORD-9912. Customer accepted refund option. Warranty expired — standard policy applies.', changes:{'Refund not requested':true,'Warranty expiry hallucinated':true,'Customer preference inverted':true} },
-    ]
-  },
-  {
-    name: 'Incident report',
-    nodes: [
-      { agent:'Engineer', emoji:'👤', label:'Original report', cls:'original', text:'Production DB went down at 14:32 UTC. Root cause: failed migration script on table user_sessions. Rolled back at 14:47. Impact: 15 minutes downtime, ~2,400 users affected. No data loss.' },
-      { agent:'Alert Agent', emoji:'🤖', label:'After alert agent', cls:'degraded', text:'DB outage 14:32-14:47 UTC. Migration failure. Rolled back. ~2,400 users affected. No data loss.' },
-      { agent:'Triage Agent', emoji:'🤖', label:'After triage agent', cls:'degraded', text:'Database outage ~15 minutes. Migration issue. Resolved. Approximately 2,400 users impacted. Possible data integrity issue.', changes:{'"Possible data integrity issue" hallucinated':true,'"No data loss" inverted':true} },
-      { agent:'Report Agent', emoji:'🤖', label:'Final incident report', cls:'corrupted', text:'SEVERITY 1: Database outage, 15 min. 2,400 users affected. Data integrity under investigation. Root cause under review. Full post-mortem required.', changes:{'"Data integrity under investigation" fabricated':true,'Severity escalated without basis':true,'Root cause (migration) lost':true} },
-    ]
+function parseEvalCsv(source) {
+  const records = [];
+  let row = [], field = '', quoted = false, closed = false;
+  for (let i = 0; i < source.length; i++) {
+    const char = source[i];
+    if (quoted) {
+      if (char === '"' && source[i + 1] === '"') {
+        field += '"';
+        i++;
+      } else if (char === '"') {
+        quoted = false;
+        closed = true;
+      } else {
+        field += char;
+      }
+    } else if (char === ',' || char === '\r' || char === '\n') {
+      row.push(field);
+      field = '';
+      closed = false;
+      if (char !== ',') {
+        records.push(row);
+        row = [];
+        if (char === '\r' && source[i + 1] === '\n') i++;
+      }
+    } else if (char === '"' && !closed && !field) {
+      quoted = true;
+    } else {
+      if (closed || char === '"') throw new Error('Invalid CSV quoting.');
+      field += char;
+    }
   }
-];
-
-let currentScenario = 0;
-function loadScenario(idx, el) {
-  currentScenario = idx;
-  document.querySelectorAll('.scenario-pill').forEach(p => p.classList.remove('active'));
-  el.classList.add('active');
-  renderChain(false);
-}
-function renderChain(animate) {
-  const s = scenarios[currentScenario];
-  const chain = document.getElementById('phone-chain');
-  chain.innerHTML = '';
-  s.nodes.forEach((n, i) => {
-    const node = document.createElement('div');
-    node.className = 'phone-node';
-    node.style.opacity = animate ? '0' : '1';
-    node.id = `phone-node-${i}`;
-
-    const changes = n.changes ? Object.keys(n.changes).map(k => `<span class="badge b-red" style="margin:2px 2px 2px 0">${k}</span>`).join('') : '';
-    const degradePct = i === 0 ? 0 : Math.min(95, i * 22);
-    const degBar = i > 0 ? `<div class="degradation-meter"><span>Degradation:</span><div style="flex:1"><div class="bar-track"><div class="bar-fill" style="width:${degradePct}%;background:${degradePct>50?'var(--red)':'var(--amber)'}"></div></div></div><span style="font-family:var(--mono);font-size:11px;color:${degradePct>50?'var(--red)':'var(--amber)'}">${degradePct}%</span></div>` : '';
-
-    node.innerHTML = `
-      <div class="phone-left">
-        <div class="phone-avatar ${n.cls === 'corrupted' ? 'degraded' : ''}">${n.emoji}</div>
-        <span class="phone-agent-label">${n.agent}</span>
-      </div>
-      <div class="phone-right">
-        <div class="phone-bubble ${n.cls}">
-          <div class="phone-bubble-label">${n.label}</div>
-          <div class="phone-text">${n.text}</div>
-          ${changes ? `<div style="margin-top:8px">${changes}</div>` : ''}
-        </div>
-        ${degBar}
-      </div>`;
-    chain.appendChild(node);
+  if (quoted) throw new Error('Unclosed quoted CSV field.');
+  if (row.length || field || closed) records.push([...row, field]);
+  const [header = [], ...data] = records.filter(record => record.some(value => value.trim()));
+  const columns = header.map(value => value.trim());
+  if (!columns.includes('id') || !columns.includes('status') || new Set(columns).size !== columns.length) {
+    throw new Error('CSV requires unique headers including id and status.');
+  }
+  return data.map((record, index) => {
+    if (record.length !== columns.length) throw new Error('Unexpected column count in CSV data row ' + (index + 1) + '.');
+    return Object.fromEntries(columns.map((column, i) => [column, record[i]]));
   });
 }
-function animateChain() {
-  renderChain(true);
-  const nodes = document.querySelectorAll('.phone-node');
-  nodes.forEach((n, i) => {
-    setTimeout(() => {
-      n.style.transition = 'opacity .4s ease, transform .4s ease';
-      n.style.transform = 'translateX(0)';
-      n.style.opacity = '1';
-    }, i * 500);
+
+function validateEvalRun(rows) {
+  if (!Array.isArray(rows) || !rows.length) throw new Error('Provide a non-empty array of cases.');
+  const run = new Map();
+  for (const [index, item] of rows.entries()) {
+    const id = typeof item?.id === 'string' ? item.id.trim() : '';
+    const status = typeof item?.status === 'string' ? item.status.trim().toLowerCase() : '';
+    if (!id || !['pass', 'fail'].includes(status)) throw new Error('Case ' + (index + 1) + ' needs an ID and pass or fail status.');
+    if (run.has(id)) throw new Error('Duplicate case ID ' + id + '.');
+    run.set(id, { status, detail: typeof item.detail === 'string' ? item.detail : '', trace: item.trace });
+  }
+  return run;
+}
+
+async function readEvalRun(file, label) {
+  try {
+    const source = (await file.text()).replace(/^\uFEFF/, '');
+    const rows = /\.csv$/i.test(file.name) ? parseEvalCsv(source) : JSON.parse(source);
+    return validateEvalRun(rows);
+  } catch (error) {
+    throw new Error(label + ' — ' + error.message);
+  }
+}
+
+function compareEvalRuns(baseline, candidate) {
+  return Array.from(new Set([...baseline.keys(), ...candidate.keys()]), id => {
+    const before = baseline.get(id), after = candidate.get(id);
+    let result;
+    if (!before) result = 'Candidate only';
+    else if (!after) result = 'Baseline only';
+    else if (before.status === after.status) result = after.status === 'pass' ? 'Still passing' : 'Still failing';
+    else result = after.status === 'pass' ? 'Improvement' : 'Regression';
+    return { id, before, after, result };
   });
 }
-renderChain(false);
+
+function evalNode(tag, value, className) {
+  const node = document.createElement(tag);
+  if (value !== undefined) node.textContent = value;
+  if (className) node.className = className;
+  return node;
+}
+
+let evalRows = [];
+let evalRunNames = [];
+function evalMetrics() {
+  const counts = {
+    Regression: 0, Improvement: 0, 'Still failing': 0, 'Still passing': 0, 'Baseline only': 0, 'Candidate only': 0
+  };
+  for (const row of evalRows) counts[row.result]++;
+  const matched = counts.Regression + counts.Improvement + counts['Still failing'] + counts['Still passing'];
+  const rate = count => matched ? (100 * count / matched).toFixed(1) + '%' : '—';
+  return {
+    matched,
+    baseline: rate(counts['Still passing'] + counts.Regression),
+    candidate: rate(counts['Still passing'] + counts.Improvement),
+    counts
+  };
+}
+
+function renderEvalRows() {
+  const table = evalElement('eval-rows');
+  const filter = evalElement('eval-filter').value;
+  table.replaceChildren();
+  for (const row of evalRows) {
+    if (filter !== 'all' && filter !== row.result) continue;
+    const tr = table.insertRow();
+    tr.insertCell().textContent = row.id;
+    for (const entry of [row.before, row.after]) {
+      const cell = tr.insertCell();
+      cell.textContent = entry ? entry.status : '—';
+      if (entry?.detail) cell.append(evalNode('small', entry.detail));
+      if (entry?.status === 'fail' && entry.trace != null) {
+        const button = evalNode('button', 'Inspect trace', 'btn btn-ghost');
+        button.onclick = () => {
+          nav('telephone', evalElement('trace-tab'));
+          evalElement('trace-input').value = JSON.stringify(entry.trace, null, 2);
+          inspectTrace();
+        };
+        cell.append(button);
+      }
+    }
+    tr.insertCell().textContent = row.result;
+  }
+  if (!table.rows.length) {
+    const cell = table.insertRow().insertCell();
+    cell.colSpan = 4;
+    cell.textContent = 'No cases match this filter.';
+  }
+}
+
+function showEvalComparison(baseline, candidate, names) {
+  evalRows = compareEvalRuns(baseline, candidate);
+  evalRunNames = names;
+  const metrics = evalMetrics();
+  const summary = evalElement('eval-summary');
+  summary.replaceChildren();
+  for (const [label, value] of [
+    ['Matched cases', metrics.matched], ['Baseline pass rate', metrics.baseline], ['Candidate pass rate', metrics.candidate],
+    ['Improvements', metrics.counts.Improvement], ['Regressions', metrics.counts.Regression]
+  ]) {
+    const stat = evalNode('div');
+    stat.append(evalNode('strong', value), evalNode('span', label));
+    summary.append(stat);
+  }
+  evalElement('eval-message').textContent = names[0] + ' → ' + names[1];
+  evalElement('eval-unmatched').textContent = metrics.counts['Baseline only'] + ' baseline only · ' +
+    metrics.counts['Candidate only'] + ' candidate only. Pass rates use matched cases.';
+  evalElement('eval-filter').value = 'all';
+  renderEvalRows();
+  evalElement('eval-results').hidden = false;
+  evalElement('eval-export').disabled = false;
+}
+
+evalElement('eval-compare').onclick = async () => {
+  const baseline = evalElement('eval-base').files[0];
+  const candidate = evalElement('eval-next').files[0];
+  const controls = ['eval-compare', 'eval-sample', 'eval-base', 'eval-next'].map(evalElement);
+  evalElement('eval-results').hidden = true;
+  evalElement('eval-export').disabled = true;
+  if (!baseline || !candidate) {
+    evalElement('eval-message').textContent = 'Choose both files before comparing.';
+    return;
+  }
+  controls.forEach(control => { control.disabled = true; });
+  try {
+    const [before, after] = await Promise.all([readEvalRun(baseline, 'Baseline'), readEvalRun(candidate, 'Candidate')]);
+    showEvalComparison(before, after, [baseline.name, candidate.name]);
+  } catch (error) {
+    evalElement('eval-message').textContent = error.message;
+  } finally {
+    controls.forEach(control => { control.disabled = false; });
+  }
+};
+
+evalElement('eval-sample').onclick = () => {
+  const baseline = validateEvalRun([
+    { id: 'incident-report', status: 'pass' }, { id: 'jira-project-routing', status: 'fail', detail: 'Routed to the default project.' },
+    { id: 'jira-priority', status: 'fail' }, { id: 'jira-required-fields', status: 'pass' }, { id: 'legacy-routing', status: 'pass' }
+  ]);
+  const candidate = validateEvalRun([
+    { id: 'incident-report', status: 'fail', detail: 'Data loss finding changed during triage.', trace: incidentTrace },
+    { id: 'jira-project-routing', status: 'pass' }, { id: 'jira-priority', status: 'pass' },
+    { id: 'jira-required-fields', status: 'pass' }, { id: 'new-routing-rule', status: 'pass' }
+  ]);
+  showEvalComparison(baseline, candidate, ['Sample baseline', 'Sample candidate']);
+};
+
+evalElement('eval-filter').onchange = renderEvalRows;
+evalElement('eval-export').onclick = () => {
+  const { matched, baseline, candidate, counts } = evalMetrics();
+  const content = [
+    'Agent benchmark card', '', 'Baseline: ' + evalRunNames[0], 'Candidate: ' + evalRunNames[1], '',
+    'Matched cases: ' + matched, 'Matched pass rate: ' + baseline + ' → ' + candidate,
+    ...Object.entries(counts).map(([label, count]) => label + ': ' + count),
+    '', 'Case results',
+    ...evalRows.map(row => JSON.stringify({
+      id: row.id, result: row.result, baseline: row.before?.status, candidate: row.after?.status,
+      baseline_detail: row.before?.detail, candidate_detail: row.after?.detail
+    }))
+  ].join('\n');
+  const url = URL.createObjectURL(new Blob([content], { type: 'text/plain;charset=utf-8' }));
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'benchmark-card.txt';
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+};
+
+function isTraceFieldMap(value) {
+  return value !== null && typeof value === 'object' && !Array.isArray(value) &&
+    Object.values(value).every(field => field === null || ['string', 'number', 'boolean'].includes(typeof field));
+}
+
+function inspectTrace() {
+  const results = evalElement('trace-results');
+  const message = evalElement('trace-message');
+  results.replaceChildren();
+  try {
+    const trace = JSON.parse(evalElement('trace-input').value);
+    if (!isTraceFieldMap(trace?.expected) || !Object.keys(trace.expected).length || !Array.isArray(trace.steps) || !trace.steps.length) {
+      throw new Error('Provide at least one expected field and one step.');
+    }
+    const steps = trace.steps.map((step, index) => {
+      if (typeof step?.name !== 'string' || !step.name.trim() || !isTraceFieldMap(step.fields)) {
+        throw new Error('Step ' + (index + 1) + ' needs a name and a fields object with scalar values.');
+      }
+      const checks = Object.entries(trace.expected).map(([key, expected]) => {
+        const observed = Object.hasOwn(step.fields, key) ? step.fields[key] : undefined;
+        const status = observed === undefined ? 'Missing' : observed === expected ? 'Pass' : 'Changed';
+        return { key, expected, observed, status };
+      });
+      return { step, checks, failures: checks.filter(check => check.status !== 'Pass').length };
+    });
+    const first = steps.findIndex(step => step.failures);
+    message.textContent = first < 0 ? 'Every step preserved all required fields.' :
+      'First failed check at step ' + (first + 1) + ' · ' + steps[first].step.name;
+    steps.forEach(({ step, checks, failures }, index) => {
+      const details = evalNode('details', undefined, 'card trace-step');
+      details.open = index === (first < 0 ? 0 : first);
+      const summary = evalNode('summary');
+      const label = typeof step.type === 'string' && step.type ? ' · ' + step.type : '';
+      summary.append(evalNode('span', (index + 1) + '. ' + step.name + label),
+        evalNode('strong', failures ? failures + ' failed' : 'All checks passed'));
+      const wrapper = evalNode('div', undefined, 'eval-table');
+      const table = evalNode('table');
+      const header = table.createTHead().insertRow();
+      for (const value of ['Field', 'Expected', 'Observed', 'Check']) {
+        const th = evalNode('th', value);
+        th.scope = 'col';
+        header.append(th);
+      }
+      const body = table.createTBody();
+      for (const check of checks) {
+        const row = body.insertRow();
+        for (const value of [check.key, JSON.stringify(check.expected), JSON.stringify(check.observed) ?? '—', check.status]) {
+          row.insertCell().textContent = value;
+        }
+      }
+      wrapper.append(table);
+      details.append(summary, wrapper);
+      results.append(details);
+    });
+  } catch (error) {
+    message.textContent = error.message;
+  }
+}
+
+evalElement('trace-inspect').onclick = inspectTrace;
+evalElement('trace-sample').onclick = () => {
+  evalElement('trace-input').value = JSON.stringify(incidentTrace, null, 2);
+  inspectTrace();
+};
 
 // ═══════════════════════════════
 // PAGE 4 — COST vs ACCURACY
